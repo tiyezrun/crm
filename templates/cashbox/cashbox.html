@@ -1,133 +1,103 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ru">
+{% extends 'main/index.html' %}
 {% block content %}
-
-
-
-<body>
-    <header class="header">
-            <nav class="nav">
-                <a href="" class="nav-burger"></a>
-                <a href="../../html/index.html" class="logo"><img src="../../static/img/LOGO.png" alt=""></a>
-                
-                <div class="nav__left">
-                    <a href="../cashier_interface/cashier_interface.html" class="nav__left-item btn btn-xs btn-nav">Интерфейс кассира</a>
-                    <a href="" class="nav__left-item bell"><span class="bell__count">10</span></a>
-                    <a href="" class="nav__left-item nav-user">
-                        Аскар Атаев<br>
-                        <span class="user-nav__status">Владелец</span>
-                    </a>
-                </div>
-            </nav>
-    </header>
-    <main class="main">
-
-         {% include 'parts/left_menu.html' %}
-        <div class="content">
-            <div class="content__block-wrapper">
-                <div class="block">
-                    <div class="block__head relative--head">
-                        <div class="block__item">
-                            <div class="button-link">
-                                <a href="" class="button-link__button button-link__button--plus-cashbox">
-                                    <span class="button-link__icon button-link__icon--plus"></span>
-                                    Создать
-                                </a>
-                            </div>
-                        </div>
-                        <div class="set-table">
-                            <a href="" class="button-controls">
+    <div class="content">
+        <div class="content__block-wrapper">
+            <div class="block">
+                <div class="block__head relative--head">
+                    <div class="block__item">
+                        <div class="button-link">
+                            <a href="" class="button-link__button button-link__button--plus-cashbox">
+                                <span class="button-link__icon button-link__icon--plus"></span>
+                                Создать
                             </a>
-                            <div class="set-list">
-                                <label class="set-list__item">
-                                    <input type="checkbox" class="visually-hidden">
-                                    Настройка 1
-                                    <span></span>
-                                </label>
-                                <label class="set-list__item">
-                                    <input type="checkbox" class="visually-hidden">
-                                    Настройка 1
-                                    <span></span>
-                                </label>
-                                <label class="set-list__item">
-                                    <input type="checkbox" class="visually-hidden">
-                                    Настройка 1
-                                    <span></span>
-                                </label>
-                            </div>
                         </div>
                     </div>
-                    <div class="block__item block__item--overauto">
-                        <table class="table">
-                            <tr>
-                                <th>
-                                    Наименование кассы
-                                </th>
-                                <th>Точка продажи</th>
-                                <th>Баланс</th>
-                                <th>Кассиры</th>
-                                <th>Создана</th>
-                            </tr>
-                            <tr>
-                                <td>№ 1</td>
-                                <td>Магазин Фрунзе № 1</td>
-                                <td>10,442.50</td>
-                                <td>Аскар Атаев</td>
-                                <td>12 июня 14:42</td>
-                            </tr>
-                            <tr>
-                                <td>№ 2</td>
-                                <td>Магазин Фрунзе № 2</td>
-                                <td>10,442.50</td>
-                                <td>Максат Эрикович</td>
-                                <td>12 июня 14:42</td>
-                            </tr>
-                        </table>
+                    <div class="set-table">
+                        <a href="" class="button-controls">
+                        </a>
+                        <div class="set-list">
+                            <label class="set-list__item">
+                                <input type="checkbox" class="visually-hidden">
+                                Настройка 1
+                                <span></span>
+                            </label>
+                            <label class="set-list__item">
+                                <input type="checkbox" class="visually-hidden">
+                                Настройка 1
+                                <span></span>
+                            </label>
+                            <label class="set-list__item">
+                                <input type="checkbox" class="visually-hidden">
+                                Настройка 1
+                                <span></span>
+                            </label>
+                        </div>
                     </div>
+                </div>
+                <div class="block__item block__item--overauto">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                Наименование кассы
+                            </th>
+                            <th>Точка продажи</th>
+                            <th>Баланс</th>
+                            <th>Кассиры</th>
+                            <th>Создана</th>
+                        </tr>
+                        <tr>
+                            <td>№ 1</td>
+                            <td>Магазин Фрунзе № 1</td>
+                            <td>10,442.50</td>
+                            <td>Аскар Атаев</td>
+                            <td>12 июня 14:42</td>
+                        </tr>
+                        <tr>
+                            <td>№ 2</td>
+                            <td>Магазин Фрунзе № 2</td>
+                            <td>10,442.50</td>
+                            <td>Максат Эрикович</td>
+                            <td>12 июня 14:42</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-    </main>
-    <div class="block block--add block--add-cashbox">
-        <div class="block__head">
-            <div class="block__item">
-                <button class="btn btn-def btn-green btn-green--disabled">Сохранить</button>
+        <div class="block block--add block--add-cashbox">
+            <div class="block__head">
+                <div class="block__item">
+                    <button class="btn btn-def btn-green btn-green--disabled">Сохранить</button>
+                </div>
+                <div class="block__item block__item--r">
+                    <button class="btn btn-circle-close" id="add-cashbox-close"></button>
+                </div>
             </div>
-            <div class="block__item block__item--r">
-                <button class="btn btn-circle-close" id="add-cashbox-close"></button>
-            </div>
-        </div>
             <div class="block__item block__item--full">
                 <p class="block__caption">Создание кассы</p>
                 <p class="block__lead">Основные настройки</p>
             </div>
-        <div class="block__item block__item--full">
-            <p class="block__item-name">Наименование</p>
-            <input type="text" class="input-text">
-        </div>
-        <div class="block__item block__item--full">
-            <p class="block__item-name">Точка продажи</p>
-            <select name="" id="" class="my-select">
-                <option data-display="Выберите"></option>
-                <option value="">Слон</option>
-                <option value="">Лев</option>
-                <option value="">Жира</option>
-            </select>
-        </div>
-        <div class="block__item block__item--full">
-            <p class="block__item-name">Кассиры</p>
-            <select name="" id="" class="my-select">
-                <option data-display="Выберите"></option>
-                <option value="">Слон</option>
-                <option value="">Лев</option>
-                <option value="">Жира</option>
-            </select>
+            <div class="block__item block__item--full">
+                <p class="block__item-name">Наименование</p>
+                <input type="text" class="input-text">
+            </div>
+            <div class="block__item block__item--full">
+                <p class="block__item-name">Точка продажи</p>
+                <select name="" id="" class="my-select">
+                    <option data-display="Выберите"></option>
+                    <option value="">Слон</option>
+                    <option value="">Лев</option>
+                    <option value="">Жира</option>
+                </select>
+            </div>
+            <div class="block__item block__item--full">
+                <p class="block__item-name">Кассиры</p>
+                <select name="" id="" class="my-select">
+                    <option data-display="Выберите"></option>
+                    <option value="">Слон</option>
+                    <option value="">Лев</option>
+                    <option value="">Жира</option>
+                </select>
+            </div>
         </div>
     </div>
-    {% endblock %}
-    <script src="../../static/js/libs.min.js"></script>
-    <script src="../../static/js/common.js"></script>
-</body>
-
-</html>
+{% endblock %}

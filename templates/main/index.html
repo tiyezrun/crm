@@ -1,13 +1,38 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Главная</title>
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script type="text/javascript" src="{% static 'https://www.gstatic.com/charts/loader.js' %}"></script>
+    <script src="{% static 'js/google-chart.js' %}"></script>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <a href="" class="nav-burger"></a>
+        <a href="" class="logo"><img src="{% static 'img/LOGO.png' %}" alt=""></a>
+        <div class="nav__left">
+            <a href="/cashier_interface" class="nav__left-item btn btn-xs btn-nav">Интерфейс кассира</a>
+            <a href="" class="nav__left-item bell"><span class="bell__count">10</span></a>
+            <a href="" class="nav__left-item nav-user">
+                Аскар Атаев<br>
+                <span class="user-nav__status">Владелец</span>
+            </a>
+        </div>
+    </nav>
+</header>
 
 
-{% block content %}
     <main class="main">
-
         {% include 'parts/left_menu.html' %}
-
+        {% block content %}
         <div class="content">
             <div class="content__block-wrapper content__block-wrapper">
                 <div class="block">
@@ -171,8 +196,6 @@
                 </div>
             </div>
         </div>
-
-
     </main>
 {% endblock %}
 <script src="{% static 'js/libs.min.js' %}"></script>
