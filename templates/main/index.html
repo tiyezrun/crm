@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+
+{% block content %}
+    <main class="main">
+
+        {% include 'parts/left_menu.html' %}
+
+        <div class="content">
+            <div class="content__block-wrapper content__block-wrapper">
+                <div class="block">
+                    <div class="block__head">
+                        <div class="block__item">
+                            <select name="" id="" class="my-select">
+                                <option data-display="Выбрать по месецам"></option>
+                                <option value="">Слон</option>
+                                <option value="">Лев</option>
+                                <option value="">Жира</option>
+                            </select>
+                        </div>
+                        <div class="block__item">
+                            <select name="" id="" class="my-select">
+                                <option data-display="Выбрать точку продажи"></option>
+                                <option value="">Слон</option>
+                                <option value="">Лев</option>
+                                <option value="">Жира</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="block__item block__item--aside">
+                        <div class="block__item-inner">
+                            <p class="block__lead">Выручка</p>
+                            <p class="blue-text">99999.50</p>
+                        </div>
+                        <div class="block__item-inner">
+                            <p class="block__lead">Себестоимость продаж</p>
+                            <p class="blue-text">0.00</p>
+                        </div>
+                        <div class="block__item-inner">
+                            <p class="block__lead">Прибыль</p>
+                            <p class="blue-text">1,382.50</p>
+                        </div>
+                        <div class="block__item-inner">
+                            <p class="block__lead">Средний чек</p>
+                            <p class="blue-text">172.81</p>
+                        </div>
+                    </div>
+                    <div class="block__item block__item--diagram">
+                        Пока не рабочий
+                    </div>
+                </div>
+            </div>
+            <div class="content__block-wrapper content__block-wrapper--col">
+                <div class="block">
+                    <div class="block__head">
+                        <div class="block__item">
+                            <h1>Документы</h1>
+                        </div>
+                        <div class="block__item block__item--r">
+                            <select name="" id="" class="my-select">
+                                <option data-display="Выбрать по месецам"></option>
+                                <option value="">Слон</option>
+                                <option value="">Лев</option>
+                                <option value="">Жира</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table table--full">
+                        <tr>
+                            <th>Наименование</th>
+                            <th>Количество</th>
+                            <th>Сумма</th>
+                            <th>Склад</th>
+                        </tr>
+                        <tr>
+                            <td>Продажа</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Закупка</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Возврат продажи</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Возврат закупки</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Корректировка</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Инвентаризация</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Оприходование</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Списывание</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                        <tr>
+                            <td>Перемещение</td>
+                            <td>238</td>
+                            <td>185 088,00</td>
+                            <td>648</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="content__block-wrapper content__block-wrapper--col">
+                <div class="block">
+                    <div class="block__head block__head--sb">
+                        <div class="block__item">
+                            <h1>Оценка склада</h1>
+                        </div>
+                        <div class="block__item block__item--r">
+                            <select name="" id="" class="my-select">
+                                <option data-display="Выбрать точку продажи"></option>
+                                <option value="">Слон</option>
+                                <option value="">Лев</option>
+                                <option value="">Жира</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="block__item block__item--full">
+                        <div class="attention">
+                            <p class="block__title">Внимание</p>
+                            <p class="attention__text"><a href="">40 позиций</a> с себестоимостью равной 0 сом (<a
+                                    href="">как
+                                изменить себестоимость</a>)</p>
+                        </div>
+                    </div>
+                    <div class="block__item">
+                        <p class="block__title">Количество товара</p>
+                        <h1 class="blue-text">50 887 ед.</h1>
+                    </div>
+                    <div class="block__item">
+                        <p class="block__subtitle">Стоимость товара</p>
+                        <p class="block__title">В розничных ценах</p>
+                        <h1 class="blue-text">22 696 593.00 сом</h1>
+                    </div>
+                    <div class="block__item">
+                        <p class="block__subtitle">Стоимость товара</p>
+                        <p class="block__title">По себестоимости</p>
+                        <h1 class="blue-text">17 203 766.00 сом</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+{% endblock %}
+<script src="{% static 'js/libs.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+</body>
+
+</html>

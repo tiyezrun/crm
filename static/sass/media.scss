@@ -1,0 +1,130 @@
+@mixin bg-l{
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+@mixin bg-r{
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+@mixin bg-t{
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+@mixin bg-b{
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+@mixin bg-x{
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+@mixin bg-y{
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+@mixin bg-c{
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+$yollow: #FFE401;
+
+$blue: #19B1FD;
+
+$blueFont: #107CB1;
+
+$bluebtn: #52C6FE;
+
+$tableBorder: #BDBDBD;
+
+$green: #40CE7C;
+
+@media (max-width: 1280px){
+}
+
+@media (max-width: 1200px){
+    .main{
+        padding-left: 0px;
+    }
+    .menu-wrapper{
+        display: none;
+        z-index: 100;
+        width: 205px;
+    }
+    .menu__btncreat-doc{
+        padding-right: 20px;
+        white-space: nowrap;
+    }
+    .menu__link{
+        padding-right: 20px;
+    }
+    .menu__link--drop::after{
+        right: 20px;
+    }
+    .nav-burger{
+        display: block;
+    }
+    .display-none{
+    display: none;
+    }
+
+    .display-flex{
+        display: flex;
+    }
+    .display-block{
+        display: block;
+    }
+    .block__col{
+        width: 33.3333%;
+    }
+    .main-cashier__sidebar{
+        min-width: 500px;
+    }    
+    .block__color{
+        width: 33.3333%;
+    }
+}
+
+@media (max-width: 1024px){
+    .content__block-wrapper--col{
+        width: 100%;
+    }
+}
+
+@media (max-width: 920px){
+    .block__item--third{
+        width: 50%;
+    }
+    .block__col{
+        width: 50%;
+    }
+    .main-cashier__sidebar{
+        min-width: 450px;
+    }
+    .block__color{
+        width: 50%;
+    }
+    .popup__content>.block__item--col-half{
+        width: 100%;
+    }
+    .popup__content>.block__item--col-half:first-child{
+        order: 1;
+    }
+}
+
+@media (max-width: 768px){
+    .main-cashier__sidebar{
+        min-width: 370px;
+    }
+
+}
+
+@media (max-width: 600px){
+}
+
+@media (max-width: 480px){
+}
+
+@media (max-width: 320px){
+
+}

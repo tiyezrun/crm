@@ -1,0 +1,70 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Главная</title>
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script type="text/javascript" src="{% static 'https://www.gstatic.com/charts/loader.js' %}"></script>
+    <script src="{% static 'js/google-chart.js' %}"></script>
+</head>
+
+<body>
+<header class="header">
+    <nav class="nav">
+        <a href="" class="nav-burger"></a>
+        <a href="" class="logo"><img src="{% static 'img/LOGO.png' %}" alt=""></a>
+        <div class="nav__left">
+            <a href="/cashier_interface" class="nav__left-item btn btn-xs btn-nav">Интерфейс кассира</a>
+            <a href="" class="nav__left-item bell"><span class="bell__count">10</span></a>
+            <a href="" class="nav__left-item nav-user">
+                Аскар Атаев<br>
+                <span class="user-nav__status">Владелец</span>
+            </a>
+        </div>
+    </nav>
+</header>
+<div class="menu-wrapper">
+    <div class="menu">
+        <div class="menu__btncreat-doc">
+            <a href="" class="btn btn-sm btn-red">Создать документ</a>
+        </div>
+        <div class="menu__item">
+            <a href="/" class="menu__link menu__link--home menu__link--active">Главная</a>
+        </div>
+        <div class="menu__item">
+            <a href="" class="menu__link menu__link--gs menu__link--drop">Спавочники</a>
+            <div class="menu__drop">
+                <a href="/directory/goods" class="menu__drop-link menu__drop-link--cashier">Товары</a>
+                <a href="/directory/service" class="menu__drop-link menu__drop-link--shifts">Услуги</a>
+            </div>
+        </div>
+        <div class="menu__item">
+            <a href="" class="menu__link menu__link--cashbox menu__link--drop">Кассы и смены</a>
+            <div class="menu__drop">
+                <a href="/cashbox" class="menu__drop-link menu__drop-link--cashier">Кассы</a>
+                <a href="/shift" class="menu__drop-link menu__drop-link--shifts">смены</a>
+            </div>
+        </div>
+        <div class="menu__item">
+            <a href="" class="menu__link menu__link--counterparties menu__link--drop">Контрагенты</a>
+            <div class="menu__drop">
+                <a href="/contractors/suppliers" class="menu__drop-link menu__drop-link--suppliers">Поставщики</a>
+                <a href="/contractors/customers" class="menu__drop-link menu__drop-link--customers">Клиенты</a>
+            </div>
+        </div>
+        <div class="menu__item">
+            <a href="" class="menu__link menu__link--compain menu__link--drop">Компании</a>
+            <div class="menu__drop">
+                <a href="/employee" class="menu__drop-link menu__drop-link--employees">Сотрудники</a>
+                <a href="/shop" class="menu__drop-link menu__drop-link--shops">Магазины</a>
+            </div>
+        </div>
+        <div class="menu__item">
+            <a href="/report" class="menu__link menu__link--reports">Отчеты</a>
+        </div>
+    </div>
+</div>
