@@ -22,8 +22,17 @@
             <a href="/cashier_interface" class="nav__left-item btn btn-xs btn-nav">Интерфейс кассира</a>
             <a href="" class="nav__left-item bell"><span class="bell__count">10</span></a>
             <a href="" class="nav__left-item nav-user">
-                Аскар Атаев<br>
-                <span class="user-nav__status">Владелец</span>
+                {% if user.is_authenticated %}
+                  {{ user.first_name }} {{ user.last_name }}
+                {% endif %}
+                <br>
+                <span class="user-nav__status">
+                    {% if user.profile.role == 1 %}
+                        Администратор
+                    {% elif user.profile.role == 3 %}
+                        Менеджер
+                    {% endif %}
+                     </span>
             </a>
         </div>
     </nav>
